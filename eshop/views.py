@@ -1,6 +1,7 @@
 from .models import Category, Product, Order, OrderItem, Cart, CartItem
 from .serializers import CategorySerializer, ProductSerializer, OrderSerializer, OrderItemSerializer, CartSerializer, CartItemSerializer
 from rest_framework.permissions import AllowAny
+from rest_framework import viewsets
 # Create your views here.
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
