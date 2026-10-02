@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'eshop',
-    'rest_framework'
-    #'drf_spectacular',  # Add drf_spectacular to the installed apps for swagger documentation
+    'rest_framework',
+    'drf_spectacular',  # Add drf_spectacular to the installed apps for swagger documentation
     
 ]
 
@@ -132,4 +132,14 @@ MAILERS = {
     'default': {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',  # Use
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE' : 'Eshop API',
+    'DESCRIPTION' : 'API documentation for Eshop project',
+    'VERSION' : '1.0.0',
 }
